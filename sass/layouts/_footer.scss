@@ -39,6 +39,10 @@
   &__part .social__icon {
     fill: $primary-white-color;
   }
+
+  &__part:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 .contact__links {

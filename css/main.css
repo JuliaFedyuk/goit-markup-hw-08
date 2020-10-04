@@ -726,6 +726,10 @@ li {
   fill: #ffffff;
 }
 
+.footer__part:not(:last-child) {
+  margin-bottom: 60px;
+}
+
 .contact__links {
   display: -webkit-box;
   display: -ms-flexbox;
