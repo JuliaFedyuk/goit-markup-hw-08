@@ -6,13 +6,17 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration-line: none;
-  display: flex;
+  padding-top: 16px;
 }
 
 .header__logo {
   color: $primary-text-color;
 }
 
-.footer__logo {
+.footer__logo--part {
   color: $primary-white-color;
+}
+
+.footer__logo {
+  display: flex;
 }

@@ -15,57 +15,71 @@
     <!--Шапка сайта-->
 
     <header class="header">
-      <div class="container flexbox">
-        <div class="header__navigation">
-          <nav class="navigation flexbox">
-            <a href="/">
-              <p class="logo">
-                <span lang="en">Web</span>
-                <span class="header__logo">Studio</span>
-              </p>
-            </a>
-            <div class="main-navigation">
-              <ul class="main-navigation__list flexbox">
-                <li class="navigation__list-item">
-                  <a href="./index.html" class="navigation__link current"
-                    >Студия</a
-                  >
-                </li>
-                <li class="navigation__list-item">
-                  <a href="./portfolio.html" class="navigation__link">
-                    Портфолио</a
-                  >
-                </li>
-                <li class="navigation__list-item">
-                  <a href="" class="navigation__link">Контакты</a>
-                </li>
-              </ul>
-            </div>
+      <div class="container">
+        <a href="/">
+          <p class="logo">Web<span class="header__logo">Studio</span></p>
+        </a>
+        <div class="header__menu" data-menu>
+          <nav class="header__navigation">
+            <ul class="navigation__list flexbox">
+              <li class="navigation__list--item">
+                <a href="./index.html" class="navigation__link current"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__list--item">
+                <a href="./portfolio.html" class="navigation__link">
+                  Портфолио</a
+                >
+              </li>
+              <li class="navigation__list--item">
+                <a href="" class="navigation__link">Контакты</a>
+              </li>
+            </ul>
           </nav>
+
+          <ul class="contacts">
+            <li class="contacts__item">
+              <span>
+                <a class="contacts__link" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </span>
+            </li>
+            <li class="contacts__item">
+              <span>
+                <a class="contacts__link" href="tel:+38-096-111-11-11"
+                  ><svg class="contacts__icon" width="10" height="16">
+                    <use href="./symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </span>
+            </li>
+          </ul>
         </div>
-        <ul class="contacts">
-          <li class="contacts__item">
-            <span>
-              <a class="contacts__link" href="mailto:info@devstudio.com">
-                <svg class="contacts__icon" width="16" height="12">
-                  <use href="./symbol-defs.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </span>
-          </li>
-          <li class="contacts__item">
-            <span>
-              <a class="contacts__link" href="tel:+38-096-111-11-11"
-                ><svg class="contacts__icon" width="10" height="16">
-                  <use href="./symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </span>
-          </li>
-        </ul>
       </div>
+      <button
+        type="button"
+        class="button__menu"
+        aria-expanded="false"
+        data-menu-button
+      >
+        <svg
+          width="40px"
+          height="40px"
+          aria-label="Переключатель мобильного меню"
+        >
+          <use
+            class="icon__cros"
+            href="./symbol-defs.svg#icon-close_40px"
+          ></use>
+          <use class="icon__menu" href="./symbol-defs.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
     </header>
 
     <!--Баннер-->
@@ -135,6 +149,15 @@
         <ul class="activity__list">
           <li class="activity__item">
             <div class="activity__thumb">
+              <picture>
+                <source
+                  srcset="
+                    ./images/imgactivity_desktop1.jpg    1x,
+                    ./images/imgactivity_desktop1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              </picture>
               <img
                 class="activity__photo"
                 src="./photos/box1.jpg"
@@ -146,6 +169,15 @@
           </li>
           <li class="activity__item">
             <div class="activity__thumb">
+              <picture>
+                <source
+                  srcset="
+                    ./images/imgactivity_desktop2.jpg    1x,
+                    ./images/imgactivity_desktop2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              </picture>
               <img
                 class="activity__photo"
                 src="./photos/box2.jpg"
@@ -157,6 +189,15 @@
           </li>
           <li class="activity__item">
             <div class="activity__thumb">
+              <picture>
+                <source
+                  srcset="
+                    ./images/imgactivity_desktop3.jpg    1x,
+                    ./images/imgactivity_desktop3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+              </picture>
               <img
                 class="activity__photo"
                 src="./photos/box3.jpg"
@@ -174,15 +215,37 @@
 
     <section class="team">
       <div class="container">
-        <h2 class="second-title">Наша команда</h2>
+        <h2 class="team__title">Наша команда</h2>
         <div class="team__field">
           <div class="team__member">
-            <img
-              class="member__photo"
-              src="./photos/img1.jpg"
-              alt="Фото Игорь Демьяненко"
-              width="270"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./photos/imgmember1_desktop.jpg    1x,
+                  ./photos/imgmember1_desktop@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./photos/imgmember1_tablet.jpg    1x,
+                  ./photos/imgmember1_tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./photos/img1_mobile.jpg    1x,
+                  ./photos/img1_mobile@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                class="member__photo"
+                src="./photos/img1.jpg"
+                alt="Фото Игорь Демьяненко"
+              />
+            </picture>
             <div class="member__information">
               <h3 class="name__title">
                 <span class="member__name"> Игорь Демьяненко</span>
@@ -245,12 +308,34 @@
             </div>
           </div>
           <div class="team__member">
-            <img
-              class="member__photo"
-              src="./photos/img2.jpg"
-              alt="Фото Ольга Репина"
-              width="270"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./photos/imgmember2_desktop.jpg    1x,
+                  ./photos/imgmember2_desktop@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./photos/imgmember2_tablet.jpg    1x,
+                  ./photos/imgmember2_tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./photos/img2_mobile.jpg    1x,
+                  ./photos/img2_mobile@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                class="member__photo"
+                src="./photos/img2.jpg"
+                alt="Фото Ольга Репина"
+              />
+            </picture>
             <div class="member__information">
               <h3 class="name__title">
                 <span class="member__name">Ольга Репина</span>
@@ -313,12 +398,34 @@
             </div>
           </div>
           <div class="team__member">
-            <img
-              class="member_photo"
-              src="./photos/img3.jpg"
-              alt="Фото Николай Тарасов"
-              width="270"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./photos/imgmember_desktop.jpg     1x,
+                  ./photos/imgmember3_desktop@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./photos/imgmember3_tablet.jpg    1x,
+                  ./photos/imgmember3_tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./photos/img3_mobile.jpg    1x,
+                  ./photos/img3_mobile@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                class="member_photo"
+                src="./photos/img3.jpg"
+                alt="Фото Николай Тарасов"
+              />
+            </picture>
             <div class="member__information">
               <h3 class="name__title">
                 <span class="member__name">Николай Тарасов</span>
@@ -381,12 +488,34 @@
             </div>
           </div>
           <div class="team__member">
-            <img
-              class="member_photo"
-              src="./photos/img4.jpg"
-              alt="Фото Михаил Ермаков"
-              width="270"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./photos/imgmember4_desktop.jpg    1x,
+                  ./photos/imgmember4_desktop@2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./photos/imgmember4_tablet.jpg    1x,
+                  ./photos/imgmember4_tablet@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./photos/img4_mobile.jpg    1x,
+                  ./photos/img4_mobile@2x.jpg 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <img
+                class="member_photo"
+                src="./photos/img4.jpg"
+                alt="Фото Михаил Ермаков"
+              />
+            </picture>
             <div class="member__information">
               <h3 class="name__title">
                 <span class="member__name">Михаил Ермаков</span>
@@ -511,9 +640,9 @@
         <div class="container flexbox">
           <div class="footer__part">
             <div class="footer__contacts">
-              <p class="logo">
+              <p class="logo footer__logo">
                 Web
-                <span class="footer__logo">Studio</span>
+                <span class="footer__logo--part">Studio</span>
               </p>
               <address class="footer__address">
                 г. Киев, пр-т Леси Украинки, 26
@@ -531,7 +660,7 @@
             </div>
           </div>
           <div class="footer__part footer__part--joining">
-            <h3 class="footer__title">Присоединяйтесь</h3>
+            <h3 class="footer__title joining">Присоединяйтесь</h3>
             <ul class="social">
               <li class="social__item">
                 <a
@@ -587,9 +716,7 @@
               </li>
             </ul>
           </div>
-          <div
-            class="footer__part footer__part--joining footer__part--sighning"
-          >
+          <div class="footer__part footer__part--sighning">
             <h3 class="footer__title">Подпишитесь на рассылку</h3>
             <div class="signing__form">
               <div class="signing__form--window">
@@ -682,15 +809,15 @@
               </div>
 
               <div class="modal__form--field form__checkbox">
-                <label class="checkbox__label"
-                  >Соглашаюсь с рассылкой и принимаю
-                  <a class="modal__link" href="">Условия договора</a>
+                <label class="checkbox__label">
                   <input
                     type="checkbox"
                     name="checkbox"
                     class="checkbox__input"
                   />
                   <span class="checkbox"> </span>
+                  Соглашаюсь с рассылкой и принимаю
+                  <a class="modal__link" href="">Условия договора</a>
                 </label>
               </div>
 
@@ -703,5 +830,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
