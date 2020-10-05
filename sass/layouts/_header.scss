@@ -142,3 +142,12 @@
     }
   }
 }
+
+.header__menu.is-open {
+  transform: translate(100%, 100%) scale(0, 1);
+}
+
+.header__menu {
+  transform: translate(0, 0) scale(1);
+  transition: 1000ms $timing-function;
+}

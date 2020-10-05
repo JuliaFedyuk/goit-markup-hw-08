@@ -113,18 +113,18 @@
   .works {
     display: flex;
     flex-wrap: wrap;
-  }
 
-  .works__item {
-    width: 354px;
-  }
+    &__item {
+      width: 354px;
+    }
 
-  .works__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
-  .works__item:nth-child(2n + 1) {
-    margin-right: 30px;
+    &__item:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
   }
 
   .footer__part {

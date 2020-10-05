@@ -8,7 +8,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  outline: 2px solid tomato;
 }
 
 body {
@@ -234,6 +233,15 @@ a:hover {
   .navigation__list--item:not(:last-child) {
     margin-bottom: 40px;
   }
+}
+
+.header__menu.is-open {
+  transform: translate(100%, 100%) scale(0, 1);
+}
+
+.header__menu {
+  transform: translate(0, 0) scale(1);
+  transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
@@ -490,10 +498,6 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.member__information {
-  padding-top: 30px;
-}
-
 .name__title {
   font-style: normal;
   font-weight: 500;
@@ -504,7 +508,11 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.member__name {
+.member__information {
+  padding-top: 30px;
+}
+
+.member__information__name {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -513,7 +521,7 @@ a:hover {
   letter-spacing: 0.03em;
 }
 
-.member__proffesion {
+.member__information__proffesion {
   margin-bottom: 16px;
   color: #757575;
 }
