@@ -10,12 +10,10 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-
   <body>
     <!--Шапка сайта-->
-
     <header class="header">
-      <div class="container">
+      <div class="container flexbox">
         <a href="/">
           <p class="logo">Web<span class="header__logo">Studio</span></p>
         </a>
@@ -61,25 +59,28 @@
             </li>
           </ul>
         </div>
-      </div>
-      <button
-        type="button"
-        class="button__menu"
-        aria-expanded="false"
-        data-menu-button
-      >
-        <svg
-          width="40px"
-          height="40px"
-          aria-label="Переключатель мобильного меню"
+        <button
+          type="button"
+          class="button__menu"
+          aria-expanded="false"
+          data-menu-button
         >
-          <use
-            class="icon__cros"
-            href="./symbol-defs.svg#icon-close_40px"
-          ></use>
-          <use class="icon__menu" href="./symbol-defs.svg#icon-menu_40px"></use>
-        </svg>
-      </button>
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon__cros"
+              href="./symbol-defs.svg#icon-close_40px"
+            ></use>
+            <use
+              class="icon__menu"
+              href="./symbol-defs.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <!--Баннер-->
@@ -157,13 +158,14 @@
                   "
                   media="(min-width: 1200px)"
                 />
+
+                <img
+                  class="activity__photo"
+                  src="./photos/box1.jpg"
+                  alt="Человек пишет код"
+                  width="370"
+                />
               </picture>
-              <img
-                class="activity__photo"
-                src="./photos/box1.jpg"
-                alt="Человек пишет код"
-                width="370"
-              />
               <p class="activity__name">Десктопные приложения</p>
             </div>
           </li>
@@ -177,13 +179,14 @@
                   "
                   media="(min-width: 1200px)"
                 />
+
+                <img
+                  class="activity__photo"
+                  src="./photos/box2.jpg"
+                  alt="Человек тестирует программы на мобильном телефоне"
+                  width="370"
+                />
               </picture>
-              <img
-                class="activity__photo"
-                src="./photos/box2.jpg"
-                alt="Человек тестирует программы на мобильном телефоне"
-                width="370"
-              />
               <p class="activity__name">Мобильные приложения</p>
             </div>
           </li>
@@ -197,13 +200,14 @@
                   "
                   media="(min-width: 1200px)"
                 />
+
+                <img
+                  class="activity__photo"
+                  src="./photos/box3.jpg"
+                  alt="Планшет с картинкой"
+                  width="370"
+                />
               </picture>
-              <img
-                class="activity__photo"
-                src="./photos/box3.jpg"
-                alt="Планшет с картинкой"
-                width="370"
-              />
               <p class="activity__name">Дизайнерские решения</p>
             </div>
           </li>
@@ -215,7 +219,7 @@
 
     <section class="team">
       <div class="container">
-        <h2 class="team__title">Наша команда</h2>
+        <h2 class="second-title team__title">Наша команда</h2>
         <div class="team__field">
           <div class="team__member">
             <picture>
@@ -639,25 +643,20 @@
       <footer>
         <div class="container flexbox">
           <div class="footer__part">
-            <div class="footer__contacts">
-              <p class="logo footer__logo">
-                Web
-                <span class="footer__logo--part">Studio</span>
-              </p>
-              <address class="footer__address">
-                г. Киев, пр-т Леси Украинки, 26
-                <span class="contact__links">
-                  <a
-                    class="contact__links--item"
-                    href="mailto:info@devstudio.com"
-                    >info@devstudio.com
-                  </a>
-                  <a class="contact__links--item" href="tel:+38-096-111-11-11">
-                    +38-096-111-11-11
-                  </a>
-                </span>
-              </address>
-            </div>
+            <a href="./" class="logo footer__logo"
+              >Web<span class="footer__logo--part">Studio</span></a
+            >
+            <address class="footer__address">
+              г. Киев, пр-т Леси Украинки, 26
+              <span class="contact__links">
+                <a class="contact__links--item" href="mailto:info@devstudio.com"
+                  >info@devstudio.com
+                </a>
+                <a class="contact__links--item" href="tel:+38-096-111-11-11">
+                  +38-096-111-11-11
+                </a>
+              </span>
+            </address>
           </div>
           <div class="footer__part footer__part--joining">
             <h3 class="footer__title joining">Присоединяйтесь</h3>
@@ -718,26 +717,21 @@
           </div>
           <div class="footer__part footer__part--sighning">
             <h3 class="footer__title">Подпишитесь на рассылку</h3>
-            <div class="signing__form">
-              <div class="signing__form--window">
-                <label for="mail" class="signing__form--label"></label>
-                <input
-                  type="email"
-                  name="mail"
-                  id="mail"
-                  placeholder="E-mail"
-                  class="form-input"
-                />
-              </div>
-              <div class="signing__form--button">
-                <button type="button" class="button sign__in--button">
-                  Подписаться
-                  <svg class="button__icon">
-                    <use href="./symbol-defs.svg#icon-icon-send"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            <form class="signing__form">
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+                class="form-input"
+              />
+              <button type="button" class="button sign__in--button">
+                Подписаться
+                <svg class="button__icon">
+                  <use href="./symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </footer>
@@ -752,79 +746,77 @@
         <div class="modal__content">
           <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <form action=" ">
-            <form class="form modal__form">
-              <div class="modal__form--field">
-                <label for="name" class="modal__form--label">Имя</label>
+          <form class="form modal__form">
+            <div class="modal__form--field">
+              <label for="name" class="modal__form--label">Имя</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="modal__form--input"
+              />
+              <svg class="modal__form--icon">
+                <use href="./symbol-defs.svg#icon-person-black-18dp-1"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="tel" class="modal__form--label">Телефон</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                class="modal__form--input"
+              />
+              <svg class="modal__form--icon">
+                <use href="./symbol-defs.svg#icon-phone-black-18dp-1"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="email" class="modal__form--label">Почта</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="modal__form--input"
+              />
+              <svg class="modal__form--icon form-email-icon">
+                <use href="./symbol-defs.svg#icon-email-black-18dp-1"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="comments" class="modal__form--label"
+                >Комментарий</label
+              >
+              <textarea
+                class="modal__form--textarea"
+                name="comments"
+                id="comments"
+                cols="30"
+                rows="10"
+                placeholder="Введите текст"
+              >
+              </textarea>
+            </div>
+
+            <div class="modal__form--field form__checkbox">
+              <label class="checkbox__label">
                 <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="modal__form--input"
+                  type="checkbox"
+                  name="checkbox"
+                  class="checkbox__input"
                 />
-                <svg class="modal__form--icon">
-                  <use href="./symbol-defs.svg#icon-person-black-18dp-1"></use>
-                </svg>
-              </div>
+                <span class="checkbox"> </span>
+                Соглашаюсь с рассылкой и принимаю
+                <a class="modal__link" href="">Условия договора</a>
+              </label>
+            </div>
 
-              <div class="modal__form--field">
-                <label for="tel" class="modal__form--label">Телефон</label>
-                <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  class="modal__form--input"
-                />
-                <svg class="modal__form--icon">
-                  <use href="./symbol-defs.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-              </div>
-
-              <div class="modal__form--field">
-                <label for="email" class="modal__form--label">Почта</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="modal__form--input"
-                />
-                <svg class="modal__form--icon form-email-icon">
-                  <use href="./symbol-defs.svg#icon-email-black-18dp-1"></use>
-                </svg>
-              </div>
-
-              <div class="modal__form--field">
-                <label for="comments" class="modal__form--label"
-                  >Комментарий</label
-                >
-                <textarea
-                  class="modal__form--textarea"
-                  name="comments"
-                  id="comments"
-                  cols="30"
-                  ows="10"
-                  placeholder="Введите текст"
-                >
-                </textarea>
-              </div>
-
-              <div class="modal__form--field form__checkbox">
-                <label class="checkbox__label">
-                  <input
-                    type="checkbox"
-                    name="checkbox"
-                    class="checkbox__input"
-                  />
-                  <span class="checkbox"> </span>
-                  Соглашаюсь с рассылкой и принимаю
-                  <a class="modal__link" href="">Условия договора</a>
-                </label>
-              </div>
-
-              <button type="submit" class="button modal__submit--button">
-                Отправить
-              </button>
-            </form>
+            <button type="submit" class="button modal__submit--button">
+              Отправить
+            </button>
           </form>
         </div>
       </div>

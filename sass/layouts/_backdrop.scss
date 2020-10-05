@@ -17,16 +17,14 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: 750ms $timing-function;
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  max-width: 450px;
   background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   &__content {
-    display: flex;
-    flex-direction: column;
     padding: 40px;
   }
 
@@ -129,8 +127,8 @@
   }
 
   &__submit--button {
-    @extend %button;
-    margin-left: 85px;
+    display: block;
+    margin: 0 auto;
   }
 
   &__submit--button:focus,
@@ -159,16 +157,9 @@
 }
 
 .form {
-  margin: 40px;
   background: $primary-white-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
 
   &__checkbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-bottom: 30px;
   }
 }
@@ -199,13 +190,11 @@
   }
 
   &__label {
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: $primary-grey-color;
-    margin-right: -25px;
+    padding-left: 25px;
   }
 }
 

@@ -8,18 +8,6 @@
   border-bottom: 1px solid #ececec;
   align-items: center;
 
-  &__menu {
-    display: none;
-    position: absolute;
-    background-color: $primary-white-color;
-    width: 100%;
-    left: 0;
-    top: 60px;
-
-    &.is-open {
-      display: block;
-    }
-  }
   &__navigation {
     margin-left: auto;
     font-style: normal;
@@ -29,6 +17,10 @@
     letter-spacing: 0.02em;
     text-align: center;
   }
+
+  &__menu {
+    display: flex;
+  }
 }
 
 .navigation {
@@ -37,18 +29,8 @@
     color: $primary-text-color;
   }
 
-  &__list {
-    margin-bottom: 60px;
-  }
-
   &__list--item {
     color: $primary-text-color;
-    text-align: center;
-    margin-top: 60px;
-  }
-
-  &__list--item:not(:last-child) {
-    margin-bottom: 40px;
   }
 }
 
@@ -70,6 +52,7 @@
 
 .contacts {
   text-align: center;
+  margin-bottom: 60px;
 
   &__link {
     color: $primary-grey-color;
@@ -79,12 +62,8 @@
     margin-bottom: 16px;
   }
 
-  &__item:last-child {
-    margin-bottom: 60px;
-  }
-
   &__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: $primary-grey-color;
   }
 
@@ -105,7 +84,7 @@
   border: none;
   background-color: transparent;
   top: 0;
-  right: 6px;
+  right: 15px;
 
   .icon__cros {
     display: none;
@@ -124,5 +103,42 @@
   &:hover {
     fill: $accent-color;
     outline: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+    position: absolute;
+    background-color: $primary-white-color;
+    width: 100%;
+    left: 0;
+    top: 60px;
+
+    &.is-open {
+      display: block;
+      z-index: 5;
+    }
+  }
+
+  .navigation {
+    &__link {
+      position: relative;
+      color: $primary-text-color;
+    }
+
+    &__list {
+      margin-bottom: 60px;
+    }
+
+    &__list--item {
+      color: $primary-text-color;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    &__list--item:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 }

@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .activity {
     display: none;
   }
@@ -10,7 +10,7 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .activity {
     display: block;
     padding-top: 94px;

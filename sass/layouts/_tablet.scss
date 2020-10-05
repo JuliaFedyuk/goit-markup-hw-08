@@ -3,14 +3,32 @@
     height: 80px;
   }
 
-  .footer__logo {
-    padding-top: 10px;
-    margin-left: 115px;
+  .logo {
+    font-size: 24px;
+    padding-top: 26px;
   }
 
-  .header__menu {
-    display: block;
-    position: static;
+  .header__logo {
+    margin-right: 88px;
+  }
+
+  .current::after {
+    margin-bottom: -25px;
+  }
+
+  .contacts {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-align: start;
+    margin-top: 21px;
+  }
+
+  .contacts__item:first-child {
+    margin-bottom: 10px;
+  }
+
+  .navigation__list--item:not(:last-child) {
+    margin-right: 50px;
   }
 
   .button__menu {
@@ -19,6 +37,8 @@
 
   .header__navigation {
     font-size: 14px;
+    padding-top: 32px;
+    margin-right: 84px;
   }
 
   .hero {
@@ -72,41 +92,14 @@
     width: 226px;
   }
 
-  .form-input {
-    margin-left: 166px;
-  }
-
-  .sign__in--button {
-    margin-left: 291px;
-  }
-
-  .footer__contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .footer__title.joining {
     margin-right: 35px;
   }
 
-  .footer__address {
-    margin-left: 76px;
-  }
-
-  .footer__part--joining {
+  .signing__form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-top: -200px;
-    margin-right: 80px;
-  }
-
-  .footer__part--sighning {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 120px;
+    align-items: center;
   }
 
   .signing__form--window {
@@ -132,5 +125,18 @@
 
   .works__item:nth-child(2n + 1) {
     margin-right: 30px;
+  }
+
+  .footer__part {
+    width: 100%;
+  }
+
+  .footer__part:not(:last-child) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .footer__title.joining {
+    margin-right: 0;
   }
 }
