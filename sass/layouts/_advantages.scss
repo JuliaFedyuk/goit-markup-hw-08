@@ -42,18 +42,18 @@
   }
 
   &__item:nth-child(1)::before {
-    background-image: url(../pictures/antenna.svg);
+    background-image: url(../images/pictures/antenna.svg);
   }
 
   &__item:nth-child(2)::before {
-    background-image: url(../pictures/clock.svg);
+    background-image: url(../images/pictures/clock.svg);
   }
 
   &__item:nth-child(3)::before {
-    background-image: url(../pictures/diagram.svg);
+    background-image: url(../images/pictures/diagram.svg);
   }
 
   &__item:nth-child(4)::before {
-    background-image: url(../pictures/astronaut.svg);
+    background-image: url(../images/pictures/astronaut.svg);
   }
 }

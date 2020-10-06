@@ -37,18 +37,18 @@
 
 .member__information {
   padding-top: 30px;
+}
 
-  &__name {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-  }
+.member__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
 
-  &__proffesion {
-    margin-bottom: 16px;
-    color: $primary-grey-color;
-  }
+.member__proffesion {
+  margin-bottom: 16px;
+  color: $primary-grey-color;
 }

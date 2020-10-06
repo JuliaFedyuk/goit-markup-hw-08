@@ -216,11 +216,11 @@ a:hover {
     left: 0;
     top: 60px;
     z-index: 5;
-    transform: translate(-100%) rotate(0deg);
+    transform: translate(-100%);
     transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__menu.is-open {
-    transform: translate(0) rotate(360deg);
+    transform: translate(0);
   }
   .navigation__link {
     position: relative;
@@ -400,19 +400,19 @@ a:hover {
 }
 
 .advantages__item:nth-child(1)::before {
-  background-image: url(../pictures/antenna.svg);
+  background-image: url(../images/pictures/antenna.svg);
 }
 
 .advantages__item:nth-child(2)::before {
-  background-image: url(../pictures/clock.svg);
+  background-image: url(../images/pictures/clock.svg);
 }
 
 .advantages__item:nth-child(3)::before {
-  background-image: url(../pictures/diagram.svg);
+  background-image: url(../images/pictures/diagram.svg);
 }
 
 .advantages__item:nth-child(4)::before {
-  background-image: url(../pictures/astronaut.svg);
+  background-image: url(../images/pictures/astronaut.svg);
 }
 
 @media screen and (min-width: 320px) {
@@ -507,7 +507,7 @@ a:hover {
   padding-top: 30px;
 }
 
-.member__information__name {
+.member__name {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -516,7 +516,7 @@ a:hover {
   letter-spacing: 0.03em;
 }
 
-.member__information__proffesion {
+.member__proffesion {
   margin-bottom: 16px;
   color: #757575;
 }
@@ -884,7 +884,7 @@ a:hover {
 
 .checkbox {
   position: absolute;
-  background-image: url(../images/Vector.svg);
+  background-image: url(../images/pictures/Vector.svg);
   width: 16px;
   height: 15px;
   left: 3px;
@@ -899,7 +899,7 @@ a:hover {
 }
 
 .checkbox__input:checked + .checkbox {
-  background-image: url(../images/icon_check.svg);
+  background-image: url(../images/pictures/icon_check.svg);
   fill: #ffffff;
   background-color: #2196f3;
   transition-property: background-color, fill;
@@ -1152,7 +1152,7 @@ a:hover {
     margin-right: 30px;
   }
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imghero_desktop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desktop.jpg);
   }
   .second-title {
     font-size: 36px;
